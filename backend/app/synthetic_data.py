@@ -7,9 +7,9 @@ def generate_students(num_students=100):
             "id": i,
             "name": f"Student {i}",
             "age": random.randint(10, 18),
+            "risk_level": random.choice(["Low", "Medium", "High"]),
             "violence_incidents": [random.randint(1, 10) for _ in range(random.randint(1, 5))],
-            "counselor_notes": [f"Note {j}" for j in range(random.randint(1, 3))],
-            "risk_level": random.choice(["Low", "Medium", "High"])
+            "counselor_notes": [f"Note {j}" for j in range(random.randint(1, 3))]
         })
     return students
 
